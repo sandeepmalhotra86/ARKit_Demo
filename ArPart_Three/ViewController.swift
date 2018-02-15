@@ -67,8 +67,7 @@ class ViewController: UIViewController , ARSCNViewDelegate{
     
     func restartSession() {
             self.myScenView.session.pause()
-        
-    
+ 
           self.myScenView.scene.rootNode.enumerateChildNodes { (node, _) in
                 node.removeFromParentNode()
             }
@@ -80,6 +79,9 @@ class ViewController: UIViewController , ARSCNViewDelegate{
         addNode()
     }
     
+    @IBAction func backbtn_Action(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
+    }
     
     
     override func didReceiveMemoryWarning() {

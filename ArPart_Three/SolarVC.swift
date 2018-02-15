@@ -30,7 +30,8 @@ class SolarVC: UIViewController {
     
     
     @IBAction func back_btn(_ sender: Any) {
-        
+        self.navigationController?.popViewController(animated: true)
+
     }
     
     func addNode(){
@@ -93,13 +94,7 @@ class SolarVC: UIViewController {
         solar_ScnView.scene.rootNode.addChildNode(sunNode)
         solar_ScnView.scene.rootNode.addChildNode(earthparentnode)
 
-        
-        
-        
-        
-     
-       
-        
+ 
     }
     
     

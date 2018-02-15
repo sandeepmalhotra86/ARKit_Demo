@@ -75,31 +75,56 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="v8S-28-cTC"/>
                                 </connections>
                             </arscnView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c1Y-D0-oVa">
+                                <rect key="frame" x="1" y="0.0" width="374" height="64"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NER-0Z-lFj">
+                                        <rect key="frame" x="8" y="17" width="44" height="30"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
+                                        <state key="normal" title="Back">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="backbtn_Action:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8fA-BC-65V"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.20392156859999999" green="0.61176470589999998" blue="0.72941176470000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="NER-0Z-lFj" firstAttribute="leading" secondItem="c1Y-D0-oVa" secondAttribute="leading" constant="8" id="4hq-SK-jz8"/>
+                                    <constraint firstItem="NER-0Z-lFj" firstAttribute="top" secondItem="c1Y-D0-oVa" secondAttribute="top" constant="17" id="Eur-tE-i54"/>
+                                    <constraint firstAttribute="height" constant="64" id="gIz-2w-FUc"/>
+                                    <constraint firstAttribute="bottom" secondItem="NER-0Z-lFj" secondAttribute="bottom" constant="17" id="udN-VU-RJk"/>
+                                </constraints>
+                            </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Rq-XZ-VXL">
                                 <rect key="frame" x="153.5" y="617" width="69" height="30"/>
                                 <state key="normal" title="Add Node"/>
                                 <connections>
-                                    <action selector="nodeAdd_Action:" destination="BYZ-38-t0r" eventType="touchUpInside" id="94p-Mi-Mao"/>
+                                    <action selector="nodeAdd_Action:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hfT-T2-7Co"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zgi-pb-k5k">
                                 <rect key="frame" x="10" y="627" width="50" height="30"/>
                                 <state key="normal" title="Restart"/>
                                 <connections>
-                                    <action selector="restartSession_Action:" destination="BYZ-38-t0r" eventType="touchUpInside" id="B2b-Fd-eEp"/>
+                                    <action selector="restartSession_Action:" destination="BYZ-38-t0r" eventType="touchUpInside" id="97E-Jl-lbG"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="rmG-f9-d4v" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="F05-UQ-H05"/>
+                            <constraint firstAttribute="trailing" secondItem="c1Y-D0-oVa" secondAttribute="trailing" id="Pc2-GS-rDq"/>
                             <constraint firstItem="1Rq-XZ-VXL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Xpo-4G-dxL"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="1Rq-XZ-VXL" secondAttribute="bottom" constant="20" id="gk4-T4-Tx0"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Zgi-pb-k5k" secondAttribute="bottom" constant="10" id="miv-D0-dHp"/>
                             <constraint firstItem="rmG-f9-d4v" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="nsK-Ss-yTu"/>
                             <constraint firstItem="rmG-f9-d4v" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="p8J-PF-jIO"/>
                             <constraint firstItem="Zgi-pb-k5k" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="qbx-ON-nmY"/>
+                            <constraint firstItem="c1Y-D0-oVa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="1" id="tTa-gv-ODL"/>
                             <constraint firstItem="rmG-f9-d4v" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="vf7-JQ-xsc"/>
+                            <constraint firstItem="c1Y-D0-oVa" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="vkx-T9-XIC"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
