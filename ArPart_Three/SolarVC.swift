@@ -45,7 +45,6 @@ class SolarVC: UIViewController {
         let moonparentnode = SCNNode()
         moonparentnode.position = SCNVector3(1,0,0)
         
-        
         let earthNode = SCNNode(geometry: SCNSphere(radius: 0.2))
         // MARK: Diffuse
         // to wrap around the whole surface

@@ -61,11 +61,11 @@
 				E66AE7FC20048A37000E969C /* AppDelegate.swift */,
 				E634D92D202DB50400C55A15 /* SolarVC.swift */,
 				E66AE7FE20048A37000E969C /* ViewController.swift */,
+				E634D92B202DB1A000C55A15 /* CategoriesVC.swift */,
 				E66AE80020048A37000E969C /* Main.storyboard */,
 				E66AE80320048A37000E969C /* Assets.xcassets */,
 				E66AE80520048A37000E969C /* LaunchScreen.storyboard */,
 				E66AE80820048A37000E969C /* Info.plist */,
-				E634D92B202DB1A000C55A15 /* CategoriesVC.swift */,
 			);
 			path = ArPart_Three;
 			sourceTree = "<group>";
