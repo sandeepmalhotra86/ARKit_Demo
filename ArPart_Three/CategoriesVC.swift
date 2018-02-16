@@ -17,6 +17,7 @@ class CategoriesVC: UIViewController {
         arrCat.append("Scenview Configuration")
         arrCat.append("Euler Angles")
         arrCat.append("Rotations")
+        arrCat.append("Draw 3D")
         // Do any additional setup after loading the view.
     }
 
@@ -39,7 +40,7 @@ class CategoriesVC: UIViewController {
 }
 extension CategoriesVC : UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return arrCat.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -56,6 +57,10 @@ extension CategoriesVC : UITableViewDelegate, UITableViewDataSource{
         }
         if indexPath.row == 2{
             let ViewController = storyboard?.instantiateViewController(withIdentifier: "SolarVC") as! SolarVC
+            self.navigationController?.pushViewController(ViewController, animated: true)
+        }
+        if indexPath.row == 3{
+            let ViewController = storyboard?.instantiateViewController(withIdentifier: "DrawLineVC") as! DrawLineVC
             self.navigationController?.pushViewController(ViewController, animated: true)
         }
         

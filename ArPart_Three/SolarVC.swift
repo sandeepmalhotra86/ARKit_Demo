@@ -34,6 +34,27 @@ class SolarVC: UIViewController {
 
     }
     
+    func addNode1(){
+        
+        let node = SCNNode(geometry: SCNSphere(radius: 0.1))
+        node.position = SCNVector3(0,0,0)
+        node.geometry?.firstMaterial?.diffuse.contents = #imageLiteral(resourceName: "EarthDay")
+        node.geometry?.firstMaterial?.specular.contents = #imageLiteral(resourceName: "EarthSpecular")
+        node.geometry?.firstMaterial?.emission.contents = #imageLiteral(resourceName: "EarthCloud")
+        
+        
+        
+        
+
+
+        let action = SCNAction.rotateBy(x: 0, y: CGFloat(360.degreeToRadians), z: 0, duration: 8)
+        let runForever = SCNAction.repeatForever(action)
+        node.runAction(runForever)
+        solar_ScnView.scene.rootNode.addChildNode(node)
+        
+    }
+    
+    
     func addNode(){
         
         let sunNode = SCNNode(geometry: SCNSphere(radius: 0.2))
@@ -74,7 +95,7 @@ class SolarVC: UIViewController {
         let runForever = SCNAction.repeatForever(action)
         sunNode.runAction(runForever)
         
-         let EarthAction = SCNAction.rotateBy(x: 0, y: CGFloat(360.degreeToRadians), z: 0, duration: 14)
+         let EarthAction = SCNAction.rotateBy(x: 0, y: CGFloat(360.degreeToRadians), z: 0, duration: 8)
         let rotateEarthParentNode = SCNAction.repeatForever(EarthAction)
         
         let moonAction = SCNAction.rotateBy(x: 0, y: CGFloat(360.degreeToRadians), z: 0, duration: 1)

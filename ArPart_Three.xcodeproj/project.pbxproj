@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E6125C1420358C6A00447731 /* DrawLineVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6125C1320358C6A00447731 /* DrawLineVC.swift */; };
 		E634D92C202DB1A000C55A15 /* CategoriesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E634D92B202DB1A000C55A15 /* CategoriesVC.swift */; };
 		E634D92E202DB50400C55A15 /* SolarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E634D92D202DB50400C55A15 /* SolarVC.swift */; };
 		E66AE7FD20048A37000E969C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E66AE7FC20048A37000E969C /* AppDelegate.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E6125C1320358C6A00447731 /* DrawLineVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawLineVC.swift; sourceTree = "<group>"; };
 		E634D92B202DB1A000C55A15 /* CategoriesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesVC.swift; sourceTree = "<group>"; };
 		E634D92D202DB50400C55A15 /* SolarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SolarVC.swift; sourceTree = "<group>"; };
 		E66AE7F920048A37000E969C /* ArPart_Three.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ArPart_Three.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -66,6 +68,7 @@
 				E66AE80320048A37000E969C /* Assets.xcassets */,
 				E66AE80520048A37000E969C /* LaunchScreen.storyboard */,
 				E66AE80820048A37000E969C /* Info.plist */,
+				E6125C1320358C6A00447731 /* DrawLineVC.swift */,
 			);
 			path = ArPart_Three;
 			sourceTree = "<group>";
@@ -143,6 +146,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E634D92C202DB1A000C55A15 /* CategoriesVC.swift in Sources */,
+				E6125C1420358C6A00447731 /* DrawLineVC.swift in Sources */,
 				E66AE7FF20048A37000E969C /* ViewController.swift in Sources */,
 				E634D92E202DB50400C55A15 /* SolarVC.swift in Sources */,
 				E66AE7FD20048A37000E969C /* AppDelegate.swift in Sources */,

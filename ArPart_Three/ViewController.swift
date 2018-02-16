@@ -29,9 +29,9 @@ class ViewController: UIViewController , ARSCNViewDelegate{
     func addNode(){
         let node = SCNNode()
         node.geometry = SCNPyramid(width: 0.1, height: 0.1, length: 0.1)
-        node.eulerAngles = SCNVector3(Float(180.degreeToRadians), 0, 0)
-        node.geometry?.firstMaterial?.diffuse.contents = UIColor.blue
-        node.position = SCNVector3(0,0.1,-0.1)
+        node.eulerAngles = SCNVector3(0, Float(90.degreeToRadians), 0)
+       node.geometry?.firstMaterial?.diffuse.contents = UIColor.red
+        node.position = SCNVector3(0.1,0.1,0.1)
         self.myScenView.scene.rootNode.addChildNode(node)
     }
     
