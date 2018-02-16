@@ -28,6 +28,8 @@ class DrawLineVC: UIViewController, ARSCNViewDelegate {
     }
     
     @IBAction func backBtn_Action(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
+        
     }
     
     @IBAction func drawBtn_Action(_ sender: Any) {
@@ -36,6 +38,52 @@ class DrawLineVC: UIViewController, ARSCNViewDelegate {
     
     func renderer(_ renderer: SCNSceneRenderer, willRenderScene scene: SCNScene, atTime time: TimeInterval) {
         print("rendering")
+        
+        
+        DispatchQueue.main.async {
+            guard let pointofView = self.mySceneView.pointOfView else{
+                return
+            }
+            let transform = pointofView.transform
+            
+            // 3rd column is for orientation
+            
+            // where your phone is facing or how is oriented
+            let orientation = SCNVector3(-transform.m31,-transform.m32,-transform.m33)
+            
+            // where your phone is located relative scenview, how its moving translationly
+            let location = SCNVector3(transform.m41,transform.m42,transform.m43)
+            let currentPositiionOfCamera = orientation + location
+            print(orientation.x, orientation.y, orientation.z)
+            if self.drawBtn.isHighlighted{
+                print("Draw is pressed")
+                let sphereNode = SCNNode(geometry: SCNSphere(radius: 0.02))
+                sphereNode.geometry?.firstMaterial?.diffuse.contents = UIColor.red
+                sphereNode.position = currentPositiionOfCamera
+                self.mySceneView.scene.rootNode.addChildNode(sphereNode)
+                
+                
+            }
+            else{
+                let pointer = SCNNode(geometry: SCNBox(width: 0.01, height: 0.01, length: 0.01, chamferRadius: 0))
+                pointer.geometry?.firstMaterial?.diffuse.contents = UIColor.red
+                pointer.position = currentPositiionOfCamera
+                
+                self.mySceneView.scene.rootNode.enumerateChildNodes({ (node, _) in
+                    if node.geometry is SCNBox{
+                        node.removeFromParentNode()
+
+                    }
+                    
+                })
+                self.mySceneView.scene.rootNode.addChildNode(pointer)
+            }
+            
+        }
+        
+        
+        
+        
     }
     /*
     // MARK: - Navigation
@@ -46,4 +94,8 @@ class DrawLineVC: UIViewController, ARSCNViewDelegate {
         // Pass the selected object to the new view controller.
     }
     */
+}
+
+func +(left: SCNVector3, right: SCNVector3 ) -> SCNVector3{
+    return SCNVector3Make(left.x + right.x, left.y + right.y, left.z + right.z)
 }
