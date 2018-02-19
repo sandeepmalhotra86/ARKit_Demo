@@ -18,6 +18,8 @@ class CategoriesVC: UIViewController {
         arrCat.append("Euler Angles")
         arrCat.append("Rotations")
         arrCat.append("Draw 3D")
+        arrCat.append("Hit Test")
+        arrCat.append("3D Objects")
         // Do any additional setup after loading the view.
     }
 
@@ -61,6 +63,14 @@ extension CategoriesVC : UITableViewDelegate, UITableViewDataSource{
         }
         if indexPath.row == 3{
             let ViewController = storyboard?.instantiateViewController(withIdentifier: "DrawLineVC") as! DrawLineVC
+            self.navigationController?.pushViewController(ViewController, animated: true)
+        }
+        if indexPath.row == 4{
+            let ViewController = storyboard?.instantiateViewController(withIdentifier: "HitTestVC") as! HitTestVC
+            self.navigationController?.pushViewController(ViewController, animated: true)
+        }
+        if indexPath.row == 5{
+            let ViewController = storyboard?.instantiateViewController(withIdentifier: "PlaceObjectVC") as! PlaceObjectVC
             self.navigationController?.pushViewController(ViewController, animated: true)
         }
         
