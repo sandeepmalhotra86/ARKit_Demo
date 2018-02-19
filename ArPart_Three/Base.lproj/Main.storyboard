@@ -24,7 +24,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="1" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="vBk-jo-5Pf">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="eQR-Au-W6U">
@@ -41,13 +41,33 @@
                                     <outlet property="delegate" destination="fUJ-BD-e3W" id="wBx-Lh-U13"/>
                                 </connections>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Da-ju-83x">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ArKit" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e8p-SO-tIn">
+                                        <rect key="frame" x="161" y="19.5" width="53" height="26.5"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="22"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.20392156859999999" green="0.61176470589999998" blue="0.72941176470000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="e8p-SO-tIn" firstAttribute="centerY" secondItem="1Da-ju-83x" secondAttribute="centerY" id="75O-5I-hpN"/>
+                                    <constraint firstItem="e8p-SO-tIn" firstAttribute="centerX" secondItem="1Da-ju-83x" secondAttribute="centerX" id="c7T-ij-lkf"/>
+                                    <constraint firstAttribute="height" constant="64" id="xjE-4r-VJt"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="vBk-jo-5Pf" firstAttribute="leading" secondItem="8dK-Le-hT7" secondAttribute="leading" id="15l-BK-dUx"/>
                             <constraint firstItem="vBk-jo-5Pf" firstAttribute="bottom" secondItem="8dK-Le-hT7" secondAttribute="bottom" id="Bvu-ef-DVB"/>
-                            <constraint firstItem="vBk-jo-5Pf" firstAttribute="top" secondItem="Vkj-QF-LLJ" secondAttribute="top" id="DPj-r4-Gl8"/>
+                            <constraint firstItem="1Da-ju-83x" firstAttribute="top" secondItem="Vkj-QF-LLJ" secondAttribute="top" id="H3O-9I-IiJ"/>
+                            <constraint firstItem="1Da-ju-83x" firstAttribute="trailing" secondItem="8dK-Le-hT7" secondAttribute="trailing" id="HfY-D1-t5O"/>
+                            <constraint firstItem="1Da-ju-83x" firstAttribute="leading" secondItem="8dK-Le-hT7" secondAttribute="leading" id="RAw-Ke-Mr3"/>
                             <constraint firstItem="vBk-jo-5Pf" firstAttribute="trailing" secondItem="8dK-Le-hT7" secondAttribute="trailing" id="axM-A5-o3k"/>
+                            <constraint firstItem="vBk-jo-5Pf" firstAttribute="top" secondItem="1Da-ju-83x" secondAttribute="bottom" id="e2k-zG-ayA"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="8dK-Le-hT7"/>
                     </view>

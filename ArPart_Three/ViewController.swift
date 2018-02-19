@@ -76,7 +76,8 @@ class ViewController: UIViewController , ARSCNViewDelegate{
     }
 
     @IBAction func nodeAdd_Action(_ sender: Any) {
-        addNode()
+        makeHouse()
+        //addNode()
     }
     
     @IBAction func backbtn_Action(_ sender: Any) {
