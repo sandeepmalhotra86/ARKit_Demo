@@ -398,6 +398,9 @@
                                         <state key="normal" title="Back">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="Back_Btn:" destination="e88-Zp-2rq" eventType="touchUpInside" id="emv-yt-AEr"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.20392156859999999" green="0.61176470589999998" blue="0.72941176470000002" alpha="1" colorSpace="calibratedRGB"/>

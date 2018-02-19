@@ -34,6 +34,15 @@ class PlaceObjectVC: UIViewController, UICollectionViewDataSource , UICollection
         // Dispose of any resources that can be recreated.
     }
     
+    
+    @IBAction func Back_Btn(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
+    }
+    
+    
+    
+    
+    
     func registerGestureRecognizers() {
         
         let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(tapped))
