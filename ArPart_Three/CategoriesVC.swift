@@ -16,6 +16,7 @@ class CategoriesVC: UIViewController {
         super.viewDidLoad()
         arrCat.append("Scenview Configuration")
         arrCat.append("Euler Angles")
+        print("test")
         arrCat.append("Rotations")
         // Do any additional setup after loading the view.
     }
